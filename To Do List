@@ -1,0 +1,28 @@
+
+***MainMenu that contain the following :
+1.Start Game
+2.Game options (that will lead to another widget window)
+3.show story
+4.About us
+5.Exit Game
+
+***Game options Menu
+1.Resolution
+2.Sounds
+3.Controls
+
+***Character select Menu (will be shown after the user pressed start)
+1.playable characters to switch between them
+2.each character will have it's own custome widget that contains :
+a) health
+b) stamina
+c) Att.power
+d) Def.power
+
+***Arena select Menu (will be shown after the character select Menu)
+1.different levels to switch between them
+
+***More Updates Soon! 
+**
+*
+#Neon CB-Tean
