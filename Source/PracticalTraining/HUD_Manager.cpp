@@ -12,6 +12,7 @@ AHUD_Manager::AHUD_Manager(const FObjectInitializer &ObjectInitializer) :Super(O
 		//check if MainMenuBp_Widget Refrence (which is stored in MainMenuUMG_refrence) if valid
 		if (MainMenuUMG_refrence.Succeeded()) {MainMenuBp_Widget = MainMenuUMG_refrence.Class;}
 
+		
 }
 
 void AHUD_Manager::BeginPlay()
@@ -25,8 +26,9 @@ void AHUD_Manager::BeginPlay()
 			MainMenu_Widget = CreateWidget<UMainMenu_Widget>(GetWorld()->GetFirstPlayerController(), MainMenuBp_Widget.LoadSynchronous());
 			MainMenu_Widget->AddToViewport();
 			
-			//Set the mouseCursor To be visible
+			//Set the mouseCursor To be visible && Set the input Mode to UI
 			GetWorld()->GetFirstPlayerController()->bShowMouseCursor = true;
+			GetWorld()->GetFirstPlayerController()->SetInputMode(FInputModeUIOnly());
 		}
 		
 		if (MainMenu_Widget && MainMenuBp_Widget)

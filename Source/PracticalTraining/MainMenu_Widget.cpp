@@ -12,12 +12,13 @@ void UMainMenu_Widget::_StartGame()
 	//Remove the MainMenu from the viewPort
 	RemoveFromParent();
 
-	//hide the mouse cursor
+	//hide the mouse cursor && Set the input Mode to the Game
 	GetWorld()->GetFirstPlayerController()->bShowMouseCursor = false;
+	GetWorld()->GetFirstPlayerController()->SetInputMode(FInputModeGameOnly());
 
 	//Load Level01 by defualt
 	UGameplayStatics::LoadStreamLevel(this, "Level02", true, true, FLatentActionInfo());
-	
+
 }
 
 void UMainMenu_Widget::_Options()
