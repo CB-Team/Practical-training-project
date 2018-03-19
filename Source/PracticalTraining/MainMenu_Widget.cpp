@@ -12,7 +12,7 @@ void UMainMenu_Widget::_StartGame()
 	//Remove the MainMenu from the viewPort
 	RemoveFromParent();
 
-	//hide the mouse cursor && Set the input Mode to the Game
+	//hide the mouse cursor & Set the input Mode to the Game
 	GetWorld()->GetFirstPlayerController()->bShowMouseCursor = false;
 	GetWorld()->GetFirstPlayerController()->SetInputMode(FInputModeGameOnly());
 
