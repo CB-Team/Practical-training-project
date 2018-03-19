@@ -11,7 +11,7 @@ AHUD_Manager::AHUD_Manager(const FObjectInitializer &ObjectInitializer) :Super(O
 
 		//check if MainMenuBp_Widget Refrence (which is stored in MainMenuUMG_refrence) if valid
 		if (MainMenuUMG_refrence.Succeeded()) {MainMenuBp_Widget = MainMenuUMG_refrence.Class;}
-		
+
 }
 
 void AHUD_Manager::BeginPlay()
@@ -27,5 +27,10 @@ void AHUD_Manager::BeginPlay()
 			
 			//Set the mouseCursor To be visible
 			GetWorld()->GetFirstPlayerController()->bShowMouseCursor = true;
+		}
+		
+		if (MainMenu_Widget && MainMenuBp_Widget)
+		{
+			MainMenu_Widget->SetMainMenuBp_Widget(MainMenuBp_Widget.LoadSynchronous());
 		}
 }

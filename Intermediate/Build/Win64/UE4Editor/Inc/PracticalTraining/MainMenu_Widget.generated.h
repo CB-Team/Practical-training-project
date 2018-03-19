@@ -8,12 +8,22 @@
 #include "ObjectBase.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
 #ifdef PRACTICALTRAINING_MainMenu_Widget_generated_h
 #error "MainMenu_Widget.generated.h already included, missing '#pragma once' in MainMenu_Widget.h"
 #endif
 #define PRACTICALTRAINING_MainMenu_Widget_generated_h
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_RPC_WRAPPERS \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSetMainMenuBp_Widget) \
+	{ \
+		P_GET_OBJECT(UClass,Z_Param_MainMenu_UMG); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->SetMainMenuBp_Widget(Z_Param_MainMenu_UMG); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(exec_EXITGame) \
 	{ \
@@ -48,7 +58,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetMainMenuBp_Widget) \
+	{ \
+		P_GET_OBJECT(UClass,Z_Param_MainMenu_UMG); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->SetMainMenuBp_Widget(Z_Param_MainMenu_UMG); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(exec_EXITGame) \
 	{ \
@@ -83,7 +102,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_INCLASS_NO_PURE_DECLS \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUMainMenu_Widget(); \
 	friend PRACTICALTRAINING_API class UClass* Z_Construct_UClass_UMainMenu_Widget(); \
@@ -94,7 +113,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_INCLASS \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_INCLASS \
 	private: \
 	static void StaticRegisterNativesUMainMenu_Widget(); \
 	friend PRACTICALTRAINING_API class UClass* Z_Construct_UClass_UMainMenu_Widget(); \
@@ -105,7 +124,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_STANDARD_CONSTRUCTORS \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMainMenu_Widget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMainMenu_Widget) \
@@ -117,7 +136,7 @@ private: \
 public:
 
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_ENHANCED_CONSTRUCTORS \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private copy-constructor, should never be used */ \
 	NO_API UMainMenu_Widget(const UMainMenu_Widget& InCopy); \
@@ -127,23 +146,23 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMainMenu_Widget); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMainMenu_Widget)
 
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_PROLOG
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_GENERATED_BODY_LEGACY \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_10_PROLOG
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_RPC_WRAPPERS \
-	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_INCLASS \
-	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_STANDARD_CONSTRUCTORS \
+	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_RPC_WRAPPERS \
+	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_INCLASS \
+	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_GENERATED_BODY \
+#define PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_INCLASS_NO_PURE_DECLS \
-	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_16_ENHANCED_CONSTRUCTORS \
+	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_INCLASS_NO_PURE_DECLS \
+	PracticalTraining_Source_PracticalTraining_MainMenu_Widget_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

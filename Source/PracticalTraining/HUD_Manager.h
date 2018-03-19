@@ -23,6 +23,6 @@ class PRACTICALTRAINING_API AHUD_Manager : public AHUD
 	UMainMenu_Widget *MainMenu_Widget;
 
 	//refrence to MainMenuBp_Widget (which is subclass of MainMenu_Widget class)
-	TAssetSubclassOf<UMainMenu_Widget> MainMenuBp_Widget;	
+	TAssetSubclassOf<UMainMenu_Widget> MainMenuBp_Widget;
 
 };

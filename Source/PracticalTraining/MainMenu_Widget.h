@@ -5,11 +5,8 @@
 #include "Blueprint/UserWidget.h"
 #include "MainMenu_Widget.generated.h"
 
-struct MenuState
-{
-	bool bStartGame, bShowOptions, bShowCredits;
-};
 
+ 
 UCLASS()
 class PRACTICALTRAINING_API UMainMenu_Widget : public UUserWidget
 {
@@ -19,9 +16,6 @@ public:
 
 	//Constructor
 	UMainMenu_Widget(const FObjectInitializer &ObjectInitislizer);
-
-	//Menu State
-	MenuState menuState;
 
 	////MenuItems Functions
 	UFUNCTION(BlueprintCallable, category = "UMG_C++", meta = (WorldContext = "WorldContextObject"))
@@ -35,5 +29,11 @@ public:
 
 	UFUNCTION(BlueprintCallable, category = "UMG_C++", meta = (WorldContext = "WorldContextObject"))
 	void _EXITGame();
+
+	//MainMenuBp_UMG refrence
+	TAssetSubclassOf<UMainMenu_Widget> MainMenuBp_Widget;
+
+	UFUNCTION()
+	void SetMainMenuBp_Widget(UClass *MainMenu_UMG);
 
 };

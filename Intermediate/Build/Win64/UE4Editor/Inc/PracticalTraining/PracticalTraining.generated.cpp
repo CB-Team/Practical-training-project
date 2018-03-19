@@ -15,8 +15,9 @@ void EmptyLinkFunctionForGeneratedCode1PracticalTraining() {}
 		FNativeFunctionRegistrar::RegisterFunction(UMainMenu_Widget::StaticClass(), "_EXITGame",(Native)&UMainMenu_Widget::exec_EXITGame);
 		FNativeFunctionRegistrar::RegisterFunction(UMainMenu_Widget::StaticClass(), "_Options",(Native)&UMainMenu_Widget::exec_Options);
 		FNativeFunctionRegistrar::RegisterFunction(UMainMenu_Widget::StaticClass(), "_StartGame",(Native)&UMainMenu_Widget::exec_StartGame);
+		FNativeFunctionRegistrar::RegisterFunction(UMainMenu_Widget::StaticClass(), "SetMainMenuBp_Widget",(Native)&UMainMenu_Widget::execSetMainMenuBp_Widget);
 	}
-	IMPLEMENT_CLASS(UMainMenu_Widget, 3365274673);
+	IMPLEMENT_CLASS(UMainMenu_Widget, 1669274831);
 	void AHUD_Manager::StaticRegisterNativesAHUD_Manager()
 	{
 	}
@@ -31,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCode1PracticalTraining() {}
 	IMPLEMENT_CLASS(APracticalTrainingGameMode, 2807383384);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	COREUOBJECT_API class UClass* Z_Construct_UClass_UObject_NoRegister();
 	UMG_API class UClass* Z_Construct_UClass_UUserWidget();
 	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameMode();
@@ -39,6 +41,7 @@ void EmptyLinkFunctionForGeneratedCode1PracticalTraining() {}
 	PRACTICALTRAINING_API class UFunction* Z_Construct_UFunction_UMainMenu_Widget__EXITGame();
 	PRACTICALTRAINING_API class UFunction* Z_Construct_UFunction_UMainMenu_Widget__Options();
 	PRACTICALTRAINING_API class UFunction* Z_Construct_UFunction_UMainMenu_Widget__StartGame();
+	PRACTICALTRAINING_API class UFunction* Z_Construct_UFunction_UMainMenu_Widget_SetMainMenuBp_Widget();
 	PRACTICALTRAINING_API class UClass* Z_Construct_UClass_UMainMenu_Widget_NoRegister();
 	PRACTICALTRAINING_API class UClass* Z_Construct_UClass_UMainMenu_Widget();
 	PRACTICALTRAINING_API class UClass* Z_Construct_UClass_AHUD_Manager_NoRegister();
@@ -121,6 +124,27 @@ void EmptyLinkFunctionForGeneratedCode1PracticalTraining() {}
 		}
 		return ReturnFunction;
 	}
+	UFunction* Z_Construct_UFunction_UMainMenu_Widget_SetMainMenuBp_Widget()
+	{
+		struct MainMenu_Widget_eventSetMainMenuBp_Widget_Parms
+		{
+			UClass* MainMenu_UMG;
+		};
+		UObject* Outer=Z_Construct_UClass_UMainMenu_Widget();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("SetMainMenuBp_Widget"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00020401, 65535, sizeof(MainMenu_Widget_eventSetMainMenuBp_Widget_Parms));
+			UProperty* NewProp_MainMenu_UMG = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("MainMenu_UMG"), RF_Public|RF_Transient|RF_MarkAsNative) UClassProperty(CPP_PROPERTY_BASE(MainMenu_UMG, MainMenu_Widget_eventSetMainMenuBp_Widget_Parms), 0x0010000000000080, Z_Construct_UClass_UObject_NoRegister(), UClass::StaticClass());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("MainMenu_Widget.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_UMainMenu_Widget_NoRegister()
 	{
 		return UMainMenu_Widget::StaticClass();
@@ -142,11 +166,13 @@ void EmptyLinkFunctionForGeneratedCode1PracticalTraining() {}
 				OuterClass->LinkChild(Z_Construct_UFunction_UMainMenu_Widget__EXITGame());
 				OuterClass->LinkChild(Z_Construct_UFunction_UMainMenu_Widget__Options());
 				OuterClass->LinkChild(Z_Construct_UFunction_UMainMenu_Widget__StartGame());
+				OuterClass->LinkChild(Z_Construct_UFunction_UMainMenu_Widget_SetMainMenuBp_Widget());
 
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UMainMenu_Widget__Credits(), "_Credits"); // 1260011603
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UMainMenu_Widget__EXITGame(), "_EXITGame"); // 2640133820
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UMainMenu_Widget__Options(), "_Options"); // 2999172145
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UMainMenu_Widget__StartGame(), "_StartGame"); // 3704276796
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UMainMenu_Widget_SetMainMenuBp_Widget(), "SetMainMenuBp_Widget"); // 3258519580
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -270,8 +296,8 @@ void EmptyLinkFunctionForGeneratedCode1PracticalTraining() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/PracticalTraining")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xC99545CE;
-			Guid.B = 0x44423FDA;
+			Guid.A = 0x54880884;
+			Guid.B = 0x4B85C994;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
